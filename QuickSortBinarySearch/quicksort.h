@@ -52,5 +52,14 @@ std::vector<int> quickSort(std::vector<int> subset) //pass as a reference?
 
 std::vector<int> inPlaceQuickSort(std::vector<int> set)
 {
-    return { 1,2,3 };
+    int pivotIndex = set.size() / 2;
+
+
 }
+
+template<typename T>
+std::vector<T> 
+
+
+
+//mabye try and write a function which takes a list of any types
