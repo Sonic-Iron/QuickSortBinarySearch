@@ -4,6 +4,8 @@
 #include <iostream>
 #include <random>
 #include <vector>
+#include "quicksort.h"
+#include "mergesort.h"
 
 
 std::vector<int> createData(const int LENGTH, const int MAXSIZE)
