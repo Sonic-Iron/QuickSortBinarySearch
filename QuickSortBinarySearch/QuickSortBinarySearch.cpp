@@ -69,7 +69,7 @@ std::vector<int> inPlaceQuickSort(std::vector<int> set)
 
 }
 
-std::vector<int> binary_search(std::vector<int> set)
+std::vector<int> binarySearch(std::vector<int> set)
 {
 
 }
