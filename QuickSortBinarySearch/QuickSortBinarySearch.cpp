@@ -20,8 +20,6 @@ std::vector<int> createData(const int LENGTH, const int MAXSIZE)
 }
 
 
-}
-
 std::vector<int> inPlaceQuickSort(std::vector<int> set)
 {
 
