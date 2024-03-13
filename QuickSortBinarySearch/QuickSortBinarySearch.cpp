@@ -21,12 +21,6 @@ std::vector<int> createData(const int LENGTH, const int MAXSIZE)
 }
 
 
-
-
-
-
-
-
 int main()
 {
     srand((unsigned int)time(NULL));
