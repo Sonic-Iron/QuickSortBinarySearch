@@ -76,10 +76,10 @@ int main()
 
     std::vector<int> dataSet = createData(NUMELEMENTS, MAXSIZE);
 
-    for (int i : dataSet)
-    {
-        std::cout << i << std::endl;
-    }
+    //for (int i : dataSet)
+    //{
+    //    std::cout << i << std::endl;
+    //}
 
     dataSet = quickSort(dataSet);
 }
