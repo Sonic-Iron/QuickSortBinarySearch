@@ -18,28 +18,38 @@ std::vector<int> createData(const int LENGTH, const int MAXSIZE)
 
 std::vector<int> quickSort(std::vector<int> subset)
 {
+    if (subset.size() < 2) {
+        std::cout << "Too small" << subset.size()  << std::endl;
+
+        return subset;
+    }
     int pivot = subset.at(subset.size() / 2);
-    std::vector<int> v1, v2;
+    std::vector<int> vfirst, vsecond, vfirstsorted, vsecondsorted;
     for (int element : subset)
     {
         if (element <= pivot)
         {
-            v1.push_back(element);
+            vfirst.push_back(element);
         }
         else{
-            v2.push_back(element);
+            vsecond.push_back(element);
         }
     }
-    if (v1.size() > 1)
+    if (vfirst.size() > 2)
     {
-        std::vector<int> v1 = quickSort(v1);
+        std::cout << "Here" << vfirst.size() << std::endl;
+        std::vector<int> vfirstsorted = quickSort(vfirst); //deletes variable name before calculating? Doesn't do this in python
     }
-    if (v2.size() > 1)
+    if (vsecond.size() > 2)
     {
-        std::vector<int> v2 = quickSort(v2);
+        std::cout << "There" << vsecond.size() << std::endl;
+        std::vector<int> vsecondsorted = quickSort(vsecond);
     }
-    v1.insert(v1.end(), v2.begin(), v2.end()); //how does this modify v1 without creating a new variable?
-    return v1;
+
+    std::cout << vfirstsorted.size() << " " << vsecondsorted.size() << std::endl;
+
+    vfirstsorted.insert(vfirstsorted.end(), vsecondsorted.begin(), vfirstsorted.end()); //how does this modify v1 without creating a new variable?
+    return vfirstsorted;
 }
 
 
@@ -47,6 +57,8 @@ std::vector<int> quickSort(std::vector<int> subset)
 
 int main()
 {
+    srand((unsigned int)time(NULL));
+
     const int MAXSIZE = 100;
     const int MAXLENGTH = 10;
     const int sizeOfArray = std::rand() % MAXLENGTH;
