@@ -1,5 +1,8 @@
 #pragma once
 
+#include <iostream> //include this here?
+#include <vector>
+
 std::vector<int> quickSort(std::vector<int> subset) //pass as a reference?
 {
     if (subset.size() < 2)
@@ -45,4 +48,9 @@ std::vector<int> quickSort(std::vector<int> subset) //pass as a reference?
     //std::cout << std::endl;
 
     return VFSorted;
+}
+
+std::vector<int> inPlaceQuickSort(std::vector<int> set)
+{
+    return { 1,2,3 };
 }

@@ -1,11 +1,12 @@
 // QuickSortBinarySearch.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
 
-#include <iostream>
+
 #include <random>
-#include <vector>
+
 #include "quicksort.h"
 #include "mergesort.h"
+#include "binarysearch.h"
 
 
 std::vector<int> createData(const int LENGTH, const int MAXSIZE)
@@ -20,15 +21,9 @@ std::vector<int> createData(const int LENGTH, const int MAXSIZE)
 }
 
 
-std::vector<int> inPlaceQuickSort(std::vector<int> set)
-{
 
-}
 
-std::vector<int> binarySearch(std::vector<int> set)
-{
 
-}
 
 
 
