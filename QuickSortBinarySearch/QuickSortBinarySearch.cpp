@@ -17,7 +17,7 @@ std::vector<int> createData(const int LENGTH, const int MAXSIZE)
     return dataSet;
 }
 
-std::vector<int> quickSort(std::vector<int> subset)
+std::vector<int> quickSort(std::vector<int> subset) //pass as a reference?
 {
     if (subset.size() < 2)
     {
@@ -64,6 +64,15 @@ std::vector<int> quickSort(std::vector<int> subset)
     return VFSorted;
 }
 
+std::vector<int> inPlaceQuickSort(std::vector<int> set)
+{
+
+}
+
+std::vector<int> binary_search(std::vector<int> set)
+{
+
+}
 
 
 
