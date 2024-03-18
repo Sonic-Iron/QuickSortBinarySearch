@@ -20,6 +20,27 @@ std::vector<int> createData(const int LENGTH, const int MAXSIZE)
     return dataSet;
 }
 
+std::vector<mixedVal> createMixedData(const int LENGTH, const int MAXSIZE)
+{
+    std::vector<mixedVal> dataSet;
+    for (int i = 0; i < LENGTH; i++)
+    {
+        mixedVal value;
+        
+        switch (std::rand() % 3) {
+        case 0 : 
+            value.i = std::rand() % MAXSIZE;
+        case 1 : 
+            value.c = std::rand() % 26;
+        default:
+            value.i = std::rand() % MAXSIZE;
+        }
+        dataSet.push_back(value);
+    }
+    return dataSet;
+}
+
+
 
 int main()
 {
@@ -29,6 +50,12 @@ int main()
     const int NUMELEMENTS = 20;
 
     std::vector<int> dataSet = createData(NUMELEMENTS, MAXSIZE);
+    std::vector<mixedVal> mixedDataSet = createMixedData(NUMELEMENTS, MAXSIZE);
+    for (mixedVal value : mixedDataSet)
+    {
+        std::cout << value.i << value.c;
+    }
+    std::cout << std::endl;
 
     dataSet = quickSort(dataSet);
 }

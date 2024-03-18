@@ -3,6 +3,14 @@
 #include <iostream> //include this here?
 #include <vector>
 
+
+union mixedVal 
+{
+    int i;
+    char c;
+};
+
+
 std::vector<int> quickSort(std::vector<int> subset) //pass as a reference?
 {
     if (subset.size() < 2)
@@ -12,7 +20,6 @@ std::vector<int> quickSort(std::vector<int> subset) //pass as a reference?
     std::vector<int> Vfirst, Vsecond, VFSorted, VSSorted;
     int pivotIndex = subset.size() / 2;
     int pivot = subset.at(pivotIndex);
-    //std::cout << subset.size();
     subset.erase(subset.begin() + pivotIndex);
     for (int element : subset)
     {
@@ -53,12 +60,9 @@ std::vector<int> quickSort(std::vector<int> subset) //pass as a reference?
 std::vector<int> inPlaceQuickSort(std::vector<int> set)
 {
     int pivotIndex = set.size() / 2;
-
-
+    return {0};
 }
 
-template<typename T>
-std::vector<T> 
 
 
 
