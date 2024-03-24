@@ -18,5 +18,25 @@
     <ClCompile Include="QuickSortBinarySearch.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="QuickSort.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="binarysearch.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="quicksort.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="mergesort.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="binarysearch.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

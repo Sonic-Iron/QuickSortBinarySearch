@@ -127,7 +127,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="binarysearch.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="QuickSort.cpp" />
     <ClCompile Include="QuickSortBinarySearch.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="binarysearch.h" />
+    <ClInclude Include="mergesort.h" />
+    <ClInclude Include="quicksort.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
