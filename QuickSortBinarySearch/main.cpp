@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <string>
 
 #include "quicksort.h"
 #include "binarysearch.h"
@@ -39,11 +40,11 @@ int main()
 {
     srand((unsigned int)time(NULL));
 
-    const int MAXSIZE = 20;
+    const int MAXVAL = 20;
     const int NUMELEMENTS = 20;
 
-    std::vector<int> dataSet = createData(NUMELEMENTS, MAXSIZE);
-    std::vector<mixedVal> mixedDataSet = createMixedData(NUMELEMENTS, MAXSIZE);
+    std::vector<int> dataSet = createData(NUMELEMENTS, MAXVAL);
+    std::vector<mixedVal> mixedDataSet = createMixedData(NUMELEMENTS, MAXVAL);
     for (mixedVal value : mixedDataSet)
     {
         std::cout << value.i << value.c;
@@ -52,9 +53,11 @@ int main()
 
     dataSet = quickSort(dataSet);
     std::cout << "NEXT TEST" << std::endl;
-    std::vector<int> set = {1,2,3,4,5,6,8,9,10};
-    int result = binarySearch(set, 7);
-    std::cout << result << std::endl;
+    int findValue = std::rand() % MAXVAL;
+    std::cout << "The value to find is : " << findValue << std::endl;
+    int idx = binarySearch(dataSet, findValue);
+    std::string valueIdx = (idx == -1) ? "doesn't exist" : std::to_string(idx);
+    std::cout << "The first instance of this value is at position : " << valueIdx << std::endl;
 }
 
 

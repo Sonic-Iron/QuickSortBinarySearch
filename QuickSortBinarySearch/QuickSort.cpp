@@ -50,9 +50,3 @@ std::vector<int> quickSort(std::vector<int> subset) //pass as a reference?
 
     return VFSorted;
 }
-
-std::vector<int> inPlaceQuickSort(std::vector<int> set)
-{
-    int pivotIndex = set.size() / 2;
-    return { 0 };
-}
