@@ -8,7 +8,7 @@ int binarySearch(std::vector<int> set, int toFind)
 	{
 		return -1;
 	}
-	if (set.at(index) == toFind)
+	if(set.at(index) == toFind)
 	{
 		std::cout << "Index : " << index << std::endl;
 		return index;
@@ -24,6 +24,6 @@ int binarySearch(std::vector<int> set, int toFind)
 	}
 	else if(set.at(index) < toFind)
 	{
-		return binarySearch(std::vector<int>(set.begin()+index, set.end()), toFind)
+		return binarySearch(std::vector<int>(set.begin() + index, set.end()), toFind);
 	}
 }
