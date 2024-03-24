@@ -40,7 +40,7 @@ int main()
 {
     srand((unsigned int)time(NULL));
 
-    const int MAXVAL = 50;
+    const int MAXVAL = 100000;
     const int NUMELEMENTS = 21699; //21699 is the max number of elements with the current method
 
     std::vector<int> dataSet = createData(NUMELEMENTS, MAXVAL);
