@@ -3,27 +3,28 @@
 
 int binarySearch(std::vector<int> set, int toFind)
 {
-	int index = set.size() / 2;
-	if (index == 0)
+	int LI = 0;
+	int UI = set.size();
+	int index = LI + (UI - LI) / 2;
+	int stepCount = 0;
+	while (LI <= UI)
 	{
-		return -1;
-	}
-	if(set.at(index) == toFind)
-	{
-		std::cout << "Index : " << index << std::endl;
-		return index;
-	}
-	else if(set.at(index) < toFind)
-	{
-		for (int element : std::vector<int>(set.begin(), set.begin() + index))
+		stepCount++;
+		index = LI + (UI - LI) / 2;
+		std::cout << stepCount << ") " << LI << " : " << index << " : " << UI << std::endl;
+		if(toFind == set.at(index))
 		{
-			std::cout << element;
+			return index;
 		}
-		std::cout << std::endl;
-		return binarySearch(std::vector<int>(set.begin(), set.begin() + index), toFind);
+		if (toFind > set.at(index))
+		{
+			LI = index + 1;
+		}
+		else
+		{
+			UI = index - 1;
+		}
 	}
-	else if(set.at(index) < toFind)
-	{
-		return binarySearch(std::vector<int>(set.begin() + index, set.end()), toFind);
-	}
+	return -1;
+
 }

@@ -51,8 +51,10 @@ int main()
     std::cout << std::endl;
 
     dataSet = quickSort(dataSet);
-    std::vector<int> set = { 1,2,3,4 };
-    binarySearch(set, 4);
+    std::cout << "NEXT TEST" << std::endl;
+    std::vector<int> set = {1,2,3,4,5,6,8,9,10};
+    int result = binarySearch(set, 7);
+    std::cout << result << std::endl;
 }
 
 
